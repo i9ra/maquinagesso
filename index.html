@@ -1,0 +1,27 @@
+<!doctype HTML>
+<html>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<script src="js/aframe.min.js"></script>
+<script src="js/aframe-ar.js"></script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<body style="margin: 0px; overflow: hidden;">
+
+<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+
+    <a-assets>
+        <a-asset-item id="tree" src="models/reduzido_destruidor.gltf"></a-asset-item>
+	</a-assets>
+
+    <a-marker type="pattern" url="data/pattern-geberit.patt">
+        <a-entity   position="0 0 0"
+                    rotation="0 0 0"
+                    scale="0.10 0.10 0.10"
+                    gltf-model="#tree" >
+        </a-entity>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+
+</a-scene>
+</body>
+</html>
